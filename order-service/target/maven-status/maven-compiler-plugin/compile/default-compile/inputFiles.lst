@@ -1,0 +1,11 @@
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\dto\OrderRequest.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\config\ObservabilityConfig.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\config\RestClientConfig.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\event\OrderPlacedEvent.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\repository\OrderRepository.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\config\OpenAPIConfig.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\model\Order.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\service\OrderService.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\controller\OrderController.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\client\InventoryClient.java
+C:\workspaces\pet\order-service\src\main\java\com\PetStore\order\OrderServiceApplication.java
