@@ -8,11 +8,11 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.PetStore</groupId>
-  <artifactId>spring-boot-3-microservices</artifactId>
+  <artifactId>petstore-on-microservices</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>spring-boot-3-microservices</name>
+  <name>petstore-on-microservices</name>
   <modules>
     <module>api-gateway</module>
     <module>product-service</module>
@@ -33,7 +33,8 @@
         <groupId>org.springframework.boot</groupId> 
         <artifactId>spring-boot-maven-plugin</artifactId>   
         <configuration>     
-            <docker>            
+            <docker>       
+               <!--fix for new Docker-->     
                 <host>//./pipe/dockerDesktopLinuxEngine</host>      
             </docker>   
         </configuration>
@@ -43,7 +44,8 @@
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
           <image>
-            <name>${dockerUser}/new-${project.artifactId}</name>
+            <name>${dockerUser}/v1-${project.artifactId}</name>
+            <!--builder compatible with new Macs-->
             <builder>dashaun/builder:tiny</builder>
             <publish>true</publish>
           </image>
