@@ -1,5 +1,9 @@
 # JEE PetStore redesing to microservices architecture
 
+Educational ”pet project” inspired by Java Pet Store Sun/Oracle BluePrints Program projects and courses on microservices development with Spring Boot 3 and current tech.stack.
+
+For Step-by-Step story on refactoring of legacy JavaEE monolith application to microservices architecture, please refer to the separate document: [docs\PetStore_Project_History.md](docs/PetStore_Project_History.md)  
+
 
 ## Purpose
 The PetStore Project serves as a practical example for Java developers, Full Stack Web App developers, team leads, and IT managers of evolving enterprise applications. It demonstrates modern technologies, application design, and development techniques.
@@ -23,11 +27,11 @@ The PetStore Project serves as a practical example for Java developers, Full Sta
 - **Test Containers with Wiremock**
 - **Grafana Stack** (Prometheus, Grafana, Loki, and Tempo)
 - **API Gateway** using Spring Cloud Gateway MVC
-- **Kubernetes**
+- **Kubernetes** For local development environment opions, please refer to the separate document: [k8s/local_k8s_options.md](k8s/local_k8s_options.md)  
 
 ### Application Architecture
 The application architecture is depicted in the provided image.
 
 ## Detailed Project History
-For a detailed history and evolution of the PetStore project, please refer to the separate document: [docs\PetStore_Project_History.md](docs/PetStore_Project_History.md)
+For a backround on the history and evolution of the PetStore project, please refer to the separate document: [docs\PetStore_Project_History.md](docs/PetStore_Project_History.md)
 
