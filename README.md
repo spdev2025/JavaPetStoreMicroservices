@@ -27,7 +27,8 @@ The PetStore Project serves as a practical example for Java developers, Full Sta
 - **Test Containers with Wiremock**
 - **Grafana Stack** (Prometheus, Grafana, Loki, and Tempo)
 - **API Gateway** using Spring Cloud Gateway MVC
-- **Kubernetes** For local development environment opions, please refer to the separate document: [k8s/local_k8s_options.md](k8s/local_k8s_options.md)  
+- **Kubernetes**
+For local development environment opions, please refer to the separate document: [k8s/local_k8s_options.md](k8s/local_k8s_options.md)  
 
 ### Application Architecture
 The application architecture is depicted in the provided image.
