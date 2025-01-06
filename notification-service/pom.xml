@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.PetStore</groupId>
-        <artifactId>spring-boot-3-microservices</artifactId>
+        <artifactId>petstore-on-microservices</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
