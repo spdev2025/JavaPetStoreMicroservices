@@ -1,10 +1,5 @@
-# PetStore Project
-
-## Intended Audience
-This project is intended for **Java developers, Full Stack Web App developers, Team leads, and IT managers** of evolving enterprise applications. It serves as a practical example for staying current on modern technologies, application design, and development techniques.
-
-## Project History
-The PetStore project is not just a simple application but one with a real-life-like history, evolving through several iterations:
+# PetStore Project History
+The PetStore project is not just a simple "pet project" but one with a real-life-like history, evolving through several iterations:
 - **Version 0:** A quick-hack using ASP VBScript during the .NET boom, which was not scalable and required a complete rewrite.
 - **First Java Version:** Implemented using Java BluePrints by Sun Microsystems, utilizing JavaServer Pages (JSP), Java Servlets, Enterprise JavaBeans (EJB), and Java Message Service (JMS). This version was deployed on a cluster of BEA Weblogic servers for fault tolerance.
 - **Refactoring to J2EE 1.3:** Following the dot-com bust, the application was refactored to J2EE 1.3, improving design patterns, scalability, modularity, and component reusability. The Struts framework was used for MVC design.
@@ -34,28 +29,17 @@ Users should be able to browse the product catalog, place orders, and receive no
 ### Database Change
 A key change involves the database for the Product Catalog. The strict relational schema doesn't fit well with the multitude of product types. The project moved to using a **document database, MongoDB**, to provide flexibility and scalability, while supporting schema validation.
 
-## Java PetStore on Microservices Architecture
+## MVP
+In MVP phase following Services was completed
 
-### Services Overview
 - Product Service
 - Order Service
 - Inventory Service
 - Notification Service
-- API Gateway using Spring Cloud Gateway MVC
-- Shop Frontend using Angular 18
+- PetStore Frontend using Angular 18
 
-### Tech Stack
-The project utilizes the following technologies:
-- **Spring Boot**
-- **Angular**
-- **Mongo DB**
-- **MySQL**
-- **Kafka**
-- **Keycloak**
-- **Test Containers with Wiremock**
+For non-functional requrements (observability, traceability, and monitoring) added
 - **Grafana Stack** (Prometheus, Grafana, Loki, and Tempo)
 - **API Gateway** using Spring Cloud Gateway MVC
+now to test in production-like env. pushint it to
 - **Kubernetes**
-
-### Application Architecture
-The application architecture is depicted in the provided image.
