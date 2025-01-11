@@ -1,0 +1,15 @@
+kubectl apply -f  grafana.yml
+kubectl apply -f  kafka-mysql.yml
+kubectl apply -f  kafka-ui.yml
+kubectl apply -f  kafka.yml
+kubectl apply -f  keycloak-mysql.yml
+kubectl apply -f  keycloak.yml
+kubectl apply -f  loki.yml
+kubectl apply -f  mongodb.yml
+kubectl apply -f  mysql.yaml
+kubectl apply -f  prometheus.yml
+kubectl apply -f  schema-registry.yml
+kubectl apply -f  tempo.yml
+kubectl apply -f  zookeeper.yml
+
+kubectl get services

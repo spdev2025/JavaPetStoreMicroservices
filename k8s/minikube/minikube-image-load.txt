@@ -1,0 +1,36 @@
+docker pull mongo:7.0.5
+docker pull mysql:8.3.0
+docker pull confluentinc/cp-zookeeper:7.5.0
+docker pull confluentinc/cp-kafka:7.5.0
+docker pull confluentinc/cp-schema-registry:7.5.0
+docker pull provectuslabs/kafka-ui:latest
+docker pull mysql:8
+docker pull quay.io/keycloak/keycloak:24.0.1
+docker pull grafana/loki:main
+docker pull prom/prometheus:v2.46.0
+docker pull grafana/tempo:2.2.2
+docker pull grafana/grafana:10.1.0
+docker pull spomytkin/v1-api-gateway:latest
+docker pull spomytkin/v1-product-service:latest
+docker pull spomytkin/v1-order-service:latest
+docker pull spomytkin/v1-inventory-service:latest
+docker pull spomytkin/v1-notification-service:latest
+
+minikube image load mongo:7.0.5
+minikube image load mongo:7.0.5
+minikube image load mysql:8.3.0
+minikube image load confluentinc/cp-zookeeper:7.5.0
+minikube image load confluentinc/cp-kafka:7.5.0
+minikube image load confluentinc/cp-schema-registry:7.5.0
+minikube image load provectuslabs/kafka-ui:latest
+minikube image load mysql:8
+minikube image load quay.io/keycloak/keycloak:24.0.1
+minikube image load grafana/loki:main
+minikube image load prom/prometheus:v2.46.0
+minikube image load grafana/tempo:2.2.2
+minikube image load grafana/grafana:10.1.0
+minikube image load spomytkin/v1-api-gateway:latest
+minikube image load spomytkin/v1-product-service:latest
+minikube image load spomytkin/v1-order-service:latest
+minikube image load spomytkin/v1-inventory-service:latest
+minikube image load spomytkin/v1-notification-service:latest

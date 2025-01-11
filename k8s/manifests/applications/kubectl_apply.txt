@@ -1,0 +1,15 @@
+kubectl apply -f  api-gateway.yml
+kubectl apply -f  appl.txt
+kubectl apply -f  common-config.yml
+kubectl apply -f  frontend.yml
+kubectl apply -f  inventory-service.yml
+kubectl apply -f  notification-service.yml
+kubectl apply -f  order-service.yml
+kubectl apply -f  product-service.yml
+
+
+kubectl get services
+
+
+
+
