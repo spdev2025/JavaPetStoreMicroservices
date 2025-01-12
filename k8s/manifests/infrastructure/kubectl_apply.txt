@@ -1,3 +1,7 @@
+# to apply all:
+for file in *.yml; do kubectl apply -f "$file"; done
+
+# to apply selective:
 kubectl apply -f  grafana.yml
 kubectl apply -f  kafka-mysql.yml
 kubectl apply -f  kafka-ui.yml
@@ -12,4 +16,5 @@ kubectl apply -f  schema-registry.yml
 kubectl apply -f  tempo.yml
 kubectl apply -f  zookeeper.yml
 
+# to check:
 kubectl get services
