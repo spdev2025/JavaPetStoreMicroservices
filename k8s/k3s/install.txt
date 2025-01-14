@@ -1,3 +1,12 @@
+#on ubuntu disable firwall
+ufw disable
+
+#or allow following
+ufw allow 6443/tcp #apiserver
+ufw allow from 10.42.0.0/16 to any #pods
+ufw allow from 10.43.0.0/16 to any #services
+
+
 curl -sfL https://get.k3s.io | sh -
 
 #to import docker / container image
