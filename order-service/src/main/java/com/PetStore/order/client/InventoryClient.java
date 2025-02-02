@@ -8,10 +8,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.service.annotation.GetExchange;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 @Slf4j
 public interface InventoryClient {
 
     Logger log = LoggerFactory.getLogger(InventoryClient.class);
+    ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor();
 
     @GetExchange("/api/inventory")
     @CircuitBreaker(name = "inventory", fallbackMethod = "fallbackMethod")
@@ -21,5 +26,10 @@ public interface InventoryClient {
     default boolean fallbackMethod(String code, Integer quantity, Throwable throwable) {
         log.info("Cannot get inventory for skucode {}, failure reason: {}", code, throwable.getMessage());
         return false;
+    }
+
+    default CompletableFuture<Boolean> isInStockAsync(String skuCode, Integer quantity) {
+        return CompletableFuture.supplyAsync(() -> 
+            isInStock(skuCode, quantity), executor);
     }
 }

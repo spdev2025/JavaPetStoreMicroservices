@@ -3,6 +3,7 @@ package com.PetStore.order;
 import com.PetStore.order.stubs.InventoryClientStub;
 import io.restassured.RestAssured;
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,6 +22,11 @@ class OrderServiceApplicationTests {
 	static MySQLContainer mySQLContainer = new MySQLContainer("mysql:8.3.0");
 	@LocalServerPort
 	private Integer port;
+
+	@BeforeAll
+	static void beforeAll() {
+		System.setProperty("spring.threads.virtual.enabled", "true");
+	}
 
 	@BeforeEach
 	void setup() {
