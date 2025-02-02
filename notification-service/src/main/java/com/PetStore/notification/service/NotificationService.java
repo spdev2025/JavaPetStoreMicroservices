@@ -3,6 +3,7 @@ package com.PetStore.notification.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
+import com.PetStore.order.event.OrderPlacedEvent;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -21,7 +22,7 @@ public class NotificationService {
         log.info("Got Message from order-placed topic {}", orderPlacedEvent);
         MimeMessagePreparator messagePreparator = mimeMessage -> {
             MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
-            messageHelper.setFrom("springshop@email.com");
+            messageHelper.setFrom("petshop@email.com");
             messageHelper.setTo(orderPlacedEvent.getEmail().toString());
             messageHelper.setSubject(String.format("Your Order with OrderNumber %s is placed successfully", orderPlacedEvent.getOrderNumber()));
             messageHelper.setText(String.format("""
@@ -30,7 +31,7 @@ public class NotificationService {
                             Your order with order number %s is now placed successfully.
                             
                             Best Regards
-                            Spring Shop
+                            Pet Shop
                             """,
                     orderPlacedEvent.getFirstName().toString(),
                     orderPlacedEvent.getLastName().toString(),
