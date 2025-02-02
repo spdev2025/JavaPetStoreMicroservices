@@ -1,0 +1,46 @@
+#on ubuntu disable firwall
+ufw disable
+
+#or allow following
+ufw allow 6443/tcp #apiserver
+ufw allow from 10.42.0.0/16 to any #pods
+ufw allow from 10.43.0.0/16 to any #services
+
+
+curl -sfL https://get.k3s.io | sh -
+
+#to import docker / container image
+#docker save localhost/imgname | sudo k3s ctr images import -
+
+#to apply all infrastructure services can just execute from k8s/manifests/infrastructure/ following
+for file in *.yml; do kubectl apply -f "$file"; done
+
+#to apply services stored in dockerhub follow  k8s/manifests/applications/kubectl_apply.txt 
+#keep in mind  "image:" values hardcoded to my namespace,  
+#to apply your chnages edit *.yml files e.g. in  k8s/manifests/applications/api-gateway.yml edit line 17 "image: [namespace]/new-api-gateway:latest"
+
+
+#To stop servers:
+
+sudo systemctl stop k3s
+
+#To restart servers:
+
+sudo systemctl start k3s
+
+#To stop agents:
+
+sudo systemctl stop k3s-agent
+
+#To restart agents:
+
+sudo systemctl start k3s-agent
+
+#Killall Script
+To stop all of the K3s containers and reset the containerd state, the k3s-killall.sh script can be used.
+
+The killall script cleans up containers, K3s directories, and networking components while also removing the iptables chain with all the associated rules. The cluster data will not be deleted.
+
+To run the killall script from a server node, run:
+
+/usr/local/bin/k3s-killall.sh
