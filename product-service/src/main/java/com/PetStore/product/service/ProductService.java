@@ -7,6 +7,7 @@ import com.PetStore.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import dev.langchain4j.agent.tool.Tool;
 
 import java.util.List;
 
@@ -29,7 +30,8 @@ public class ProductService {
                 product.getSkuCode(),
                 product.getPrice());
     }
-
+    
+    @Tool ("Returns the list of all products")
     public List<ProductResponse> getAllProducts() {
         return productRepository.findAll()
                 .stream()

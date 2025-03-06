@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>product-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>product-service</name>
     <description>product service</description>
     <properties>
@@ -29,6 +29,23 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-spring-boot-starter</artifactId>
+			<version>1.0.0-beta1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
+			<version>1.0.0-beta1</version>
+		</dependency>
+
+		<!--		<dependency>-->
+		<!--			<groupId>dev.langchain4j</groupId>-->
+		<!--			<artifactId>langchain4j-ollama-spring-boot-starter</artifactId>-->
+		<!--			<version>1.0.0-beta1</version>-->
+		<!--		</dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
