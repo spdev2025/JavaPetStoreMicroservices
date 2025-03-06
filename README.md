@@ -10,7 +10,7 @@ The PetStore Project serves as a practical example for Java developers, Full Sta
 
 ## Architecture
 ### Services Overview
-- Product Service
+- Product Service with AI agent chat - langchain4j for LLM and Tools integration
 - Order Service
 - Inventory Service
 - Notification Service
@@ -28,7 +28,7 @@ The PetStore Project serves as a practical example for Java developers, Full Sta
 - **Grafana Stack** (Prometheus, Grafana, Loki, and Tempo)
 - **API Gateway** using Spring Cloud Gateway MVC
 - **Kubernetes**
-For local development environment opions, please refer to the separate document: [k8s/local_k8s_options.md](k8s/local_k8s_options.md)  
+For local development environment Kubernetes opions, please refer to the separate document: [k8s/local_k8s_options.md](k8s/local_k8s_options.md)  
 
 ### Application Architecture
 The application architecture is depicted in the provided image.
