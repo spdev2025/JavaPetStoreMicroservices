@@ -1,0 +1,85 @@
+openapi: 3.0.3
+info:
+  title: PetStore Product Service API
+  description: API for managing pet store products
+  version: 0.0.2
+  
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+
+paths:
+  /api/product:
+    post:
+      summary: Create a new product
+      operationId: createProduct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProductRequest'
+      responses:
+        '200':
+          description: Product created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductResponse'
+    get:
+      summary: Get all products
+      operationId: getAllProducts
+      responses:
+        '200':
+          description: List of all products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ProductResponse'
+
+components:
+  schemas:
+    ProductRequest:
+      type: object
+      required:
+        - name
+        - description
+        - skuCode
+        - price
+      properties:
+        name:
+          type: string
+          example: "Dog Food Premium"
+        description:
+          type: string
+          example: "Premium quality dog food"
+        skuCode:
+          type: string
+          example: "DOG-FOOD-001"
+        price:
+          type: number
+          format: double
+          example: 29.99
+
+    ProductResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "123e4567-e89b-12d3-a456-426614174000"
+        name:
+          type: string
+          example: "Dog Food Premium"
+        description:
+          type: string
+          example: "Premium quality dog food"
+        skuCode:
+          type: string
+          example: "DOG-FOOD-001"
+        price:
+          type: number
+          format: double
+          example: 29.99
