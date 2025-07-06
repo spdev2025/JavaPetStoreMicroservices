@@ -20,6 +20,7 @@ The PetStore Project serves as a practical example for Java developers, Full Sta
 ### Tech Stack
 - **Spring Boot**
 - **Angular**
+- **langchain4j**
 - **MongoDB**
 - **MySQL**
 - **Kafka**
