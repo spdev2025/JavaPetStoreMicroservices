@@ -42,12 +42,12 @@ class OrderServiceApplicationTests {
 	void shouldSubmitOrder() {
 		String submitOrderJson = """
                 {
-                     "skuCode": "iphone_15",
+                     "skuCode": "Cat_Domestic_ShortHair_22",
                      "price": 1000,
                      "quantity": 1
                 }
                 """;
-		InventoryClientStub.stubInventoryCall("iphone_15", 1);
+		InventoryClientStub.stubInventoryCall("Cat_Domestic_ShortHair_22", 1);
 
 		var responseBodyString = RestAssured.given()
 				.contentType("application/json")
@@ -67,12 +67,12 @@ class OrderServiceApplicationTests {
 	void shouldFailOrderWhenProductIsNotInStock() {
 		String submitOrderJson = """
                 {
-                     "skuCode": "iphone_15",
+                     "skuCode": "Cat_Domestic_ShortHair_22",
                      "price": 1000,
                      "quantity": 1000
                 }
                 """;
-		InventoryClientStub.stubInventoryCall("iphone_15", 1000);
+		InventoryClientStub.stubInventoryCall("Cat_Domestic_ShortHair_22", 1000);
 
 		RestAssured.given()
 				.contentType("application/json")
